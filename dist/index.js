@@ -4316,7 +4316,7 @@ class Client {
         else {
             welcome = await this.connect(options.host, options.port);
         }
-        if (useExplicitTLS) {
+        if (!useExplicitTLS) {
             // Fixes https://github.com/patrickjuchli/basic-ftp/issues/166 by making sure
             // host is set for any future data connection as well.
             const secureOptions = (_a = options.secureOptions) !== null && _a !== void 0 ? _a : {};
